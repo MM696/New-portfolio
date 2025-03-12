@@ -606,7 +606,7 @@ span {
 @media screen and (min-width: 360px) {
     body {
         font-size: 17px;
-        padding-left: 1rem;
+        padding: 1rem;
     }
     #container-one {
         padding: 30px;
