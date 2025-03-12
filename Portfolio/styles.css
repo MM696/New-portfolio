@@ -8,15 +8,13 @@ body {
     font-family: "Kanit", sans-serif;
 }
 
-/* Grid container styling */
+/* Container styling */
 #container {
-    /*margin: 20px 0; /* Combined top and bottom margin */
     font-family: "Kanit", sans-serif;
     color: #091057;
 }
 
 #container-one {
-    /*margin: 20px 0; /* Combined top and bottom margin */
     font-family: "Kanit", sans-serif;
     color: #091057;
 }
@@ -335,7 +333,7 @@ span {
     color: #f4f4f4; /* Text color */
     border-radius: 30px;
     width: 200px;
-    height: 60px;
+    height: 47px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -460,7 +458,7 @@ span {
 }
 
 /* Box styling */
-.box-one {
+/*.box-one {
     position: relative;
     left: 15%;
     height: 220px;
@@ -468,7 +466,7 @@ span {
     background-color: #F4F6FF;
     margin-top: 65vh;
     border-radius: 5px;
-}
+}*/
 
 .jox-q {
     font-size: 25px;
@@ -544,22 +542,6 @@ span {
     text-align: center;
 }
 
-.shadow-one {
-    margin-top: 107vh;
-    position: relative;
-    right: 34vh;
-    font-size: 70px;
-    color: #DBD3D3;
-}
-
-.shadow {
-    margin-top: 13vh;
-    position: absolute;
-    margin-left: 65vh;
-    font-size: 70px;
-    color: #DBD3D3;
-}
-
 .jox-z {
     margin-top: 2vh;
     text-align: center;
@@ -622,7 +604,6 @@ span {
 
 /* Small devices (portrait phones, 360px and up) */
 @media screen and (min-width: 360px) {
-
     body {
         font-size: 17px;
         padding-left: 1rem;
@@ -630,20 +611,17 @@ span {
     #container-one {
         padding: 30px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        padding: 20px;
         background-color: white;
         border-radius: 10px;
-        width: inherit;
         margin-top: 40px;
         margin-bottom: 30px;
     }
-
     .jox-x {
         height: auto;
         text-align: center;
         width: auto;
     }
-    .img{
+    .img {
         left: 20%;
         opacity: 0;
         height: 50vh;
@@ -653,7 +631,7 @@ span {
         display: block;
         width: 200px;
         margin-top: 80px;
-        }
+    }
     .jox-k {
         text-align: center;
     }
@@ -676,51 +654,20 @@ span {
         height: 0;
         margin-top: 0;
     }
-    .box-one {
-        position: inherit;
-        width: auto;
-        margin-top: 30px;
-        padding: 20px;
-        height: auto;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .box-two {
-        width: auto;
+    .box-one, .box-two, .box3, .box4 {
         background-color: #F4F6FF;
         border-radius: 5px;
-        height: auto;
-        margin-top: 30px;
         padding: 15px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .box3 {
-        width: auto;
-        background-color: #F4F6FF;
-        border-radius: 5px;
-        height: auto;
         margin-top: 30px;
-        padding: 15px;
-        line-height: 35px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .box4 {
-        width: auto;
-        background-color: #F4F6FF;
-        border-radius: 5px;
-        height: auto;
-        margin-top: 30px;
-        padding: 15px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     .button-one {
         margin-top: 0;
     }
-
 }
 
-/* Medium devices (Tablets, 768px and up) */ 
+/* Medium devices (Tablets, 768px and up) */
 @media screen and (min-width: 768px) {
- 
     body {
         font-size: 18px;
         padding-left: 4rem;
@@ -736,50 +683,29 @@ span {
         padding: 20px;
         background-color: white;
         border-radius: 10px;
-        width: inherit;
         margin-top: 40px;
         margin-bottom: 30px;
-}
-
-.jox-m {
-    grid-column: 1 / span 2; /* Stretches across both columns */
-    text-align: center;
-    margin-top: 1px;
-    font-size: 2rem;
-}
-
-.line-one {
-    grid-column: 1 / span 2; /* Ensures the line spans both columns */
-    margin: 5px 0;
-    height: 2px; /* Made it a thin horizontal line */
-    width: 100%; /* Stretches across the container */
-    background-color: #DBD3D3;
-}
-
-.box-one, .box-two {
-    background-color: #f4f4f4;
-    border-radius: 5px;
-    margin-top: 0;
-}
-
-.jox-p {
-    grid-column: 1 / span 2; /* Stretches across both columns */
-    text-align: center;
-    margin-top: 30px;
-    font-size: 2rem;
-}
-.box3, .box4 {
-    margin-top: 0;
-}
-
-.line-two {
-    grid-column: 1 / span 2; /* Ensures the line spans both columns */
-    height: 2px; /* Makes it a thin horizontal line */
-    background-color: #DBD3D3;
-    width: 100%; /* Adjust width for better layout */
-    margin: 10px auto; /* Centers the line */
-}
-
+    }
+    .jox-m, .line-one, .jox-p {
+        grid-column: 1 / span 2;
+        text-align: center;
+    }
+    .line-one {
+        margin: 5px 0;
+        height: 2px;
+        width: 100%;
+        background-color: #DBD3D3;
+    }
+    .box-one, .box-two, .box3, .box4 {
+        margin-top: 0;
+    }
+    .line-two {
+        grid-column: 1 / span 2;
+        height: 2px;
+        background-color: #DBD3D3;
+        width: 100%;
+        margin: 10px auto;
+    }
     .jox-x {
         padding-right: 50px;
         padding-left: 50px;
@@ -789,7 +715,7 @@ span {
     .jox-k {
         font-size: 2rem;
     }
-     .img {
+    .img {
         opacity: 0.5;
         left: 30%;
         height: 45vh;
@@ -797,7 +723,7 @@ span {
     .jox-a {
         float: left;
         width: 180px;
-        }
+    }
     .jox-b {
         display: flex;
         flex-direction: column;
@@ -809,7 +735,6 @@ span {
     .tag {
         padding-left: 30px;
     }
-    
     .btn {
         padding: 0;
     }
@@ -820,14 +745,12 @@ span {
         margin-top: 10vh;
         height: 10vh;
     }
-    
     .box {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 250px; /* Keeps all boxes uniform */
+        width: 250px;
     }
-    
     .address, .number, .email, .download {
         height: 100px;
         width: 100px;
@@ -836,36 +759,29 @@ span {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 15px; /* More spacing below */
+        margin-bottom: 15px;
     }
-    
     .address img, .number img, .email img, .download img {
         width: 50px;
         height: 50px;
     }
-    
     .text-1, .text-3, .text-5, .text-7 {
         font-size: 1.2rem;
         font-weight: bold;
-        margin-bottom: 5px; /* Adds spacing below title */
+        margin-bottom: 5px;
     }
-    
     .text-2, .text-4, .text-6, .text-8 {
         font-size: 1rem;
         color: #007bff;
     }
-    
     .text-8 a {
         text-decoration: none;
         color: #007bff;
         font-weight: bold;
     }
-    
     .text-8 a:hover {
         text-decoration: underline;
     }
-    
-    
 }
 
 /* Large devices (Laptops, 1024px and up) */
@@ -873,8 +789,7 @@ span {
     body {
         font-size: 20px;
         padding-left: 3rem;
-
-    }    
+    }
     #container-one {
         display: grid;
         gap: 20px;
@@ -885,10 +800,8 @@ span {
         padding: 20px;
         background-color: white;
         border-radius: 10px;
-        width: inherit;
         margin-top: 0;
     }
-
     .img {
         left: 590px;
         width: 40vw;
@@ -898,78 +811,60 @@ span {
         opacity: inherit;
         top: auto;
     }
-
     .jox-x {
         margin-top: 20px;
-    letter-spacing: 3px;
-    font-size: 25px;
-    width: 50%;
-    position: relative;
-    top: 70px;
-    padding-left: 30px;
+        letter-spacing: 3px;
+        font-size: 25px;
+        width: 50%;
+        position: relative;
+        top: 70px;
+        padding-left: 30px;
     }
-
     .jox-g {
         font-size: 34px;
         font-weight: bold;
         margin-bottom: 10px;
     }
-
     .jox-g span {
         color: #091057;
         font-weight: bold;
     }
-
     .jox-h {
         font-size: 20px;
         margin-bottom: 20px;
     }
-
     .button-container {
         display: flex;
         gap: 10px;
     }
-
-
-    .one:hover {
+    .one:hover, .two:hover {
         background-color: #DBD3D3;
     }
-
-    .two:hover {
-        background-color: #DBD3D3;
-    }
-    
     .jox-a {
         max-width: 100%;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-    
     .jox-b {
         display: flex;
         flex-direction: column;
         gap: 10px;
     }
-    
     .profile {
         font-size: 18px;
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    
     .tag {
         font-weight: bold;
         color: #007bff;
     }
-    
-    /* Skills Section */
     .jox-c {
         font-size: 20px;
         margin-top: 20px;
     }
-    
     .s-set {
         padding: 10px;
         background: #007bff;
@@ -980,8 +875,6 @@ span {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         margin-top: 5px;
     }
-    
-    /* About Me Section */
     .jox-d {
         grid-column: span 2;
         background: white;
@@ -991,19 +884,16 @@ span {
         text-align: left;
         margin-top: 20px;
     }
-    
     .jox-i {
         font-weight: bold;
         margin-bottom: 10px;
     }
-    
     .jox-e {
         font-size: 16px;
         color: #555;
         margin-bottom: 15px;
         line-height: 1.5;
     }
-    
     .aboutme {
         font-size: 16px;
         color: #333;
@@ -1013,148 +903,115 @@ span {
         margin-bottom: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    
     .tag1 {
         font-weight: bold;
     }
-    
-    /* Button Styling */
-    
     .three:hover {
         background-color: #DBD3D3;
     }
-    /* General Layout */
-body {
-    font-family: "Kanit", sans-serif;
-    background-color: azure;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* Container Styling */
-#container, #container-one {
-    font-family: "Kanit", sans-serif;
-    color: #091057;
-    margin-bottom: 30px;
-}
-
-/* Title and Section Styling */
-
-.jox-k, .jox-m, .jox-p, .jox-y {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-}
-.jox-m {
-    margin-top: 1px;
-}
-
-.jox-l, .jox-z {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
-.jox-n, .jox-q {
-    font-weight: bold;
-}
-
-/* Experience & Education */
-.box-one, .box-two, .box3, .box4 {
-    background: #f8f8f8;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.line-one, .line-two {
-    border-top: 2px;
-    margin: 20px 0;
-}
-
-/* Button Styling */
-.button-one, .button-two {
-    font-size: 1rem;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 30px;
-    margin-bottom: 60px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.button-one:hover, .button-two:hover {
-    background-color: #DBD3D3;
-    transform: scale(1.05);
-}
-
-.button-two {
-    margin-top: 20px;
-}
-
-/* Instagram Section */
-.bgimg {
-    background-image: url("./images/img_1.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.jox-u {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-}
-
-.jox-v {
-    color: white;
-    font-size: 1.5rem;
-}
-
-/* Contact Section */
-.contact-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.contact-one, .contact-two, .contact-three, .contact-four {
-    background: #f8f8f8;
-    padding: 20px;
-    width: 250px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-one img, .contact-two img, .contact-three img, .contact-four img {
-    width: 50px;
-    height: 50px;
-}
-
-.text-1, .text-3, .text-5, .text-7 {
-    font-weight: bold;
-    color: #091057;
-}
-
-.text-2, .text-4, .text-6, .text-8 {
-    color: #007bff;
-    font-size: 1rem;
-}
-
-/* Link Styling */
-.text-8 a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.text-8 a:hover {
-    text-decoration: underline;
-}
-
+    body {
+        font-family: "Kanit", sans-serif;
+        background-color: azure;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #container, #container-one {
+        font-family: "Kanit", sans-serif;
+        color: #091057;
+        margin-bottom: 30px;
+    }
+    .jox-k, .jox-m, .jox-p, .jox-y {
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    .jox-m {
+        margin-top: 1px;
+    }
+    .jox-l, .jox-z {
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    .jox-n, .jox-q {
+        font-weight: bold;
+    }
+    .box-one, .box-two, .box3, .box4 {
+        background: #f8f8f8;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .line-one, .line-two {
+        border-top: 2px;
+        margin: 20px 0;
+    }
+    .button-one, .button-two {
+        font-size: 1rem;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 30px;
+        margin-bottom: 60px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .button-one:hover, .button-two:hover {
+        background-color: #DBD3D3;
+        transform: scale(1.05);
+    }
+    .button-two {
+        margin-top: 20px;
+    }
+    .bgimg {
+        background-image: url("./images/img_1.jpg");
+        background-size: cover;
+        background-position: center;
+        padding: 50px 0;
+        text-align: center;
+    }
+    .jox-u {
+        font-size: 2rem;
+        font-weight: bold;
+        color: white;
+    }
+    .jox-v {
+        color: white;
+        font-size: 1.5rem;
+    }
+    .contact-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .contact-one, .contact-two, .contact-three, .contact-four {
+        background: #f8f8f8;
+        padding: 20px;
+        width: 250px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .contact-one img, .contact-two img, .contact-three img, .contact-four img {
+        width: 50px;
+        height: 50px;
+    }
+    .text-1, .text-3, .text-5, .text-7 {
+        font-weight: bold;
+        color: #091057;
+    }
+    .text-2, .text-4, .text-6, .text-8 {
+        color: #007bff;
+        font-size: 1rem;
+    }
+    .text-8 a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .text-8 a:hover {
+        text-decoration: underline;
+    }
 }
 
 /* Extra large devices (Desktops, 1440px and up) */
@@ -1171,7 +1028,6 @@ body {
         margin-top: 25vh;
         border-radius: 5px;
     }
-
 }
 
 /* Ultra-wide screens (4K and up) */
@@ -1179,5 +1035,4 @@ body {
     body {
         font-size: 22px;
     }
-    
 }
