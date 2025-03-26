@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Applying smooth scrolling for different elements
+    addSmoothScroll(".title-1", "body");
     addSmoothScroll(".title-2", ".jox-i");
     addSmoothScroll(".title-3", ".jox-k");
     addSmoothScroll(".title-4", ".jox-y");
