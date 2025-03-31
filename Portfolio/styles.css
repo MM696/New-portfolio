@@ -134,7 +134,6 @@ body {
     color: #091057;
     width: 250px;
     font-weight: 900;
-    font-size: x-large;
 }
 
 /* Header styling */
@@ -485,7 +484,7 @@ span {
 
 .box5 {
     position: relative;
-    height: 20vh;
+    height: 25vh;
     width: auto;
     background-color: #F4F6FF;
     border-radius: 5px;
@@ -496,7 +495,7 @@ span {
 
 .box6 {
     position: relative;
-    height: 20vh;
+    height: 25vh;
     width: auto;
     background-color: #F4F6FF;
     border-radius: 5px;
@@ -598,8 +597,8 @@ span {
 
 
 
-/* Small devices (portrait phones, 360px and up) */
-@media screen and (min-width: 360px) {
+/* Small devices (portrait phones, 300px and up) */
+@media screen and (min-width: 300px) {
     body {
         font-size: 17px;
         padding: 1rem;
@@ -644,6 +643,10 @@ span {
         position: relative;
         top: 10px;
     }
+    .jox-s {
+        margin: auto;
+        padding-top: 0;
+    }
     .line-one {
         position: inherit;
         width: 0;
@@ -656,6 +659,15 @@ span {
         padding: 15px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         margin-top: 30px;
+    }
+    .box5 {
+        height: auto;
+        padding: 20px;
+    }
+    .box6 {
+        margin-top: 20px;
+        padding: 20px;
+        height: auto;
     }
     .button-one {
         margin-top: 0;
@@ -746,6 +758,9 @@ span {
         flex-direction: column;
         align-items: center;
         width: 250px;
+    }
+    .box6 {
+        margin-top: 0;
     }
     .address, .number, .email, .download {
         height: 100px;
