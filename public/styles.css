@@ -448,7 +448,7 @@ span {
 
 /* Miscellaneous styles */
 .three {
-    width: 100px;
+    width: 140px;
     letter-spacing: 1px;
 }
 
@@ -646,6 +646,9 @@ span {
     .jox-s {
         margin: auto;
         padding-top: 0;
+    }
+    .jox-v {
+        font-size: larger;
     }
     .line-one {
         position: inherit;
