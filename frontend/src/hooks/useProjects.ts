@@ -95,7 +95,7 @@ export const useLikeProject = () => {
   
   return useMutation({
     mutationFn: (id: string) => apiService.likeProject(id),
-    onSuccess: (data, id) => {
+    onSuccess: (_, id) => {
       // Update the project in cache
       queryClient.setQueryData(projectKeys.detail(id), (old: any) => {
         if (old) {
@@ -144,7 +144,7 @@ export const useUpdateProject = () => {
   return useMutation({
     mutationFn: ({ id, data }: { id: string; data: Partial<Project> }) =>
       apiService.updateProject(id, data),
-    onSuccess: (data, { id }) => {
+    onSuccess: (_, { id }) => {
       queryClient.invalidateQueries(projectKeys.detail(id));
       queryClient.invalidateQueries(projectKeys.lists());
       queryClient.invalidateQueries(projectKeys.stats());

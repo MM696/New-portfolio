@@ -100,7 +100,7 @@ export const useUpdateContactStatus = () => {
   return useMutation({
     mutationFn: ({ id, status }: { id: string; status: string }) =>
       apiService.updateContactStatus(id, status),
-    onSuccess: (data, { id }) => {
+    onSuccess: (_, { id }) => {
       queryClient.invalidateQueries(contactKeys.detail(id));
       queryClient.invalidateQueries(contactKeys.lists());
       queryClient.invalidateQueries(contactKeys.stats());
