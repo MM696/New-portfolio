@@ -32,18 +32,19 @@ const Contact = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl font-bold text-secondary-900 mb-4">
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="text-center mb-16">
+    <h1 className="text-5xl font-bold text-secondary-900 mb-4">
             Get In Touch
           </h1>
           <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
             Ready to start your next project? Let's discuss how I can help bring your ideas to life.
           </p>
-        </motion.div>
+  </div>
+</motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -206,87 +207,86 @@ const Contact = () => {
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="space-y-8"
-          >
-            <div>
-              <h2 className="text-2xl font-bold text-secondary-900 mb-6">
-                Contact Information
-              </h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-secondary-900">Email</h3>
-                    <p className="text-secondary-600">your.email@example.com</p>
-                  </div>
-                </div>
+         <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="space-y-6">
+    <div>
+      <h2 className="text-2xl font-bold text-secondary-900 mb-6">
+        Contact Information
+      </h2>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-secondary-900">Phone</h3>
-                    <p className="text-secondary-600">+1 (555) 123-4567</p>
-                  </div>
-                </div>
+      <div className="space-y-6">
+        {/* Email */}
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <Mail className="w-6 h-6 text-primary-600" />
+          </div>
+          <div>
+            <h3 className="font-semibold text-secondary-900">Email</h3>
+            <p className="text-secondary-600">mcanthonyarinze@gmail.com</p>
+          </div>
+        </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-secondary-900">Location</h3>
-                    <p className="text-secondary-600">Your City, Country</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        {/* Phone */}
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <Phone className="w-6 h-6 text-primary-600" />
+          </div>
+          <div>
+            <h3 className="font-semibold text-secondary-900">Phone</h3>
+            <p className="text-secondary-600">+234 (811) 745-1648</p>
+          </div>
+        </div>
 
-            <div className="card p-6">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                What I Offer
-              </h3>
-              <ul className="space-y-3 text-secondary-600">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Custom web application development</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Mobile app development</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>UI/UX design and implementation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>API development and integration</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span>Technical consulting and mentoring</span>
-                </li>
-              </ul>
-            </div>
+        {/* Location */}
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <MapPin className="w-6 h-6 text-primary-600" />
+          </div>
+          <div>
+            <h3 className="font-semibold text-secondary-900">Location</h3>
+            <p className="text-secondary-600">Abuja, Nigeria</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div className="card p-6">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                Response Time
-              </h3>
-              <p className="text-secondary-600">
-                I typically respond to all inquiries within 24-48 hours during business days. 
-                For urgent projects, please mention it in your message.
-              </p>
-            </div>
-          </motion.div>
+    {/* What I Offer */}
+    <div className="card p-6 mt-10">
+      <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+        What I Offer
+      </h3>
+      <ul className="space-y-3 text-secondary-600">
+        {[
+          "Custom web application development",
+          "Mobile app development",
+          "UI/UX design and implementation",
+          "API development and integration",
+          "Technical consulting and mentoring",
+        ].map((item, i) => (
+          <li key={i} className="flex items-start gap-3">
+            <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Response Time */}
+    <div className="card p-6 mt-10">
+      <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+        Response Time
+      </h3>
+      <p className="text-secondary-600">
+        I typically respond to all inquiries within 24-48 hours during business
+        days. For urgent projects, please mention it in your message.
+      </p>
+    </div>
+  </div>
+</motion.div>
         </div>
       </div>
     </div>

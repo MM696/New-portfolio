@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Download, Mail, Github, Linkedin } from 'lucide-react';
+import { Download, Mail } from 'lucide-react';
 
 const About = () => {
   const skills = [
@@ -35,27 +35,28 @@ const About = () => {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl font-bold text-secondary-900 mb-4">
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="text-center mb-16">
+     <h1 className="text-5xl font-bold text-secondary-900 mb-4">
             About Me
           </h1>
           <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
             I'm a passionate full-stack developer with over 3 years of experience creating beautiful and functional web applications.
           </p>
+  </div>
         </motion.div>
 
         {/* Profile Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16"
-        >
-          <div>
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+    <div>
             <h2 className="text-3xl font-bold text-secondary-900 mb-6">
               Who I Am
             </h2>
@@ -120,28 +121,29 @@ const About = () => {
               </a>
             </div>
           </div>
+  </div>
         </motion.div>
 
         {/* Skills Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  <div className="mb-16">
+    <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
             Skills & Technologies
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {skills.map((skillGroup, index) => (
-              <motion.div
-                key={skillGroup.category}
+                <motion.div
+   key={skillGroup.category}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
-                className="card p-6"
-              >
-                <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+>
+  <div className="card p-6">
+    <h3 className="text-xl font-semibold text-secondary-900 mb-4">
                   {skillGroup.category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -154,9 +156,11 @@ const About = () => {
                     </span>
                   ))}
                 </div>
+  </div>
               </motion.div>
             ))}
           </div>
+  </div>
         </motion.div>
 
         {/* Experience Section */}
@@ -164,8 +168,9 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mb-16"
+          
         >
+          <div className="mb-16"> 
           <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
             Work Experience
           </h2>
@@ -176,8 +181,8 @@ const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7 + index * 0.1, duration: 0.8 }}
-                className="card p-6"
               >
+                <div className="card p-6">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-semibold text-secondary-900">
@@ -194,8 +199,10 @@ const About = () => {
                 <p className="text-secondary-600">
                   {job.description}
                 </p>
+                </div>
               </motion.div>
             ))}
+          </div>
           </div>
         </motion.div>
 
@@ -204,8 +211,8 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-center"
         >
+          <div className="text-center">
           <h2 className="text-3xl font-bold text-secondary-900 mb-4">
             Let's Work Together
           </h2>
@@ -226,6 +233,7 @@ const About = () => {
             >
               View My Work
             </a>
+          </div>
           </div>
         </motion.div>
       </div>

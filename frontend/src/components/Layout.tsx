@@ -59,36 +59,41 @@ const Layout = ({ children }: LayoutProps) => {
             <Link to="/" className="flex items-center space-x-2">
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                className="text-2xl font-bold gradient-text"
+                
               >
+                <div className="text-2xl font-bold gradient-text">
                 McAnthony
+                </div>
               </motion.div>
             </Link>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`relative px-3 py-2 text-sm font-medium transition-colors ${
-                    location.pathname === item.href
-                      ? 'text-primary-600'
-                      : 'text-secondary-600 hover:text-primary-600'
-                  }`}
-                >
-                  {item.name}
-                  {location.pathname === item.href && (
-                    <motion.div
-                      layoutId="activeTab"
-                      className="absolute inset-0 bg-primary-50/50 rounded-md"
-                      initial={false}
-                      transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                    />
-                  )}
-                </Link>
-              ))}
-            </nav>
+  {navigation.map((item) => (
+    <Link
+      key={item.name}
+      to={item.href}
+      className={`relative px-3 py-2 text-sm font-medium transition-colors ${
+        location.pathname === item.href
+          ? 'text-primary-600'
+          : 'text-secondary-600 hover:text-primary-600'
+      }`}
+    >
+      {item.name}
+
+      {location.pathname === item.href && (
+        <motion.div
+          layoutId="activeTab"
+          initial={false}
+          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        >
+          <div className="absolute inset-0 bg-primary-50/50 rounded-md" />
+        </motion.div> // ✅ this closing tag was broken
+      )}
+    </Link>
+  ))}
+</nav>
+
 
             {/* Mobile menu button */}
             <button
@@ -107,8 +112,9 @@ const Layout = ({ children }: LayoutProps) => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-white/95 backdrop-blur-md border-b border-secondary-200"
+              
             >
+              <div className="md:hidden bg-white/95 backdrop-blur-md border-b border-secondary-200">
               <div className="px-4 py-6 space-y-4">
                 {navigation.map((item) => (
                   <Link
@@ -123,6 +129,7 @@ const Layout = ({ children }: LayoutProps) => {
                     {item.name}
                   </Link>
                 ))}
+              </div>
               </div>
             </motion.div>
           )}

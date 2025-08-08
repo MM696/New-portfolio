@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ExternalLink, Github, Calendar, Clock, Eye, Heart } from 'lucide-react';
 
 const ProjectDetail = () => {
-  const { id } = useParams();
 
   // Mock data - replace with API call
   const project = {
@@ -44,11 +43,13 @@ const ProjectDetail = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="mb-8"
+          
         >
+          <div className="mb-8">
           <Link to="/projects" className="text-primary-600 hover:text-primary-700">
             ← Back to Projects
           </Link>
+          </div>
         </motion.div>
 
         {/* Project Header */}
@@ -56,8 +57,9 @@ const ProjectDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-12"
+          
         >
+          <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <span className="badge badge-secondary">{project.category}</span>
             {project.featured && <span className="badge badge-primary">Featured</span>}
@@ -95,6 +97,7 @@ const ProjectDetail = () => {
               <span>{project.likes} likes</span>
             </div>
           </div>
+          </div>
         </motion.div>
 
         {/* Project Image */}
@@ -102,13 +105,15 @@ const ProjectDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="mb-12"
+          
         >
+          <div className="mb-12">
           <img
             src={project.image}
             alt={project.title}
             className="w-full rounded-lg shadow-lg"
           />
+          </div>
         </motion.div>
 
         {/* Project Actions */}
@@ -116,8 +121,9 @@ const ProjectDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8 }}
-          className="flex flex-wrap gap-4 mb-12"
+          
         >
+          <div className="flex flex-wrap gap-4 mb-12">
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -140,6 +146,7 @@ const ProjectDetail = () => {
               View Code
             </a>
           )}
+          </div>
         </motion.div>
 
         {/* Project Details */}
