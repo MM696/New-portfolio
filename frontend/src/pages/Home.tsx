@@ -44,81 +44,87 @@ const Home = () => {
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-accent-50" />
         <div className="absolute inset-0 bg-hero-pattern opacity-30" />
-        
+
         {/* Floating elements */}
         <motion.div
-          animate={{ float: [0, -20, 0] }}
+          animate={{ y: [0, -20, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-20 h-20 bg-primary-200 rounded-full opacity-20"
-        />
+        >
+          <div className="absolute top-20 left-10 w-20 h-20 bg-primary-200 rounded-full opacity-20" />
+        </motion.div>
+
         <motion.div
-          animate={{ float: [0, 20, 0] }}
+          animate={{ y: [0, 20, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-20 right-10 w-32 h-32 bg-accent-200 rounded-full opacity-20"
-        />
+        >
+          <div className="absolute bottom-20 right-10 w-32 h-32 bg-accent-200 rounded-full opacity-20" />
+        </motion.div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
           >
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium"
-            >
-              <Zap className="w-4 h-4 mr-2" />
-              Available for new projects
-            </motion.div>
-
-            {/* Main heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-balance"
-            >
-              Hi, I'm{' '}
-              <span className="gradient-text">McAnthony</span>
-              <br />
-              <span className="text-secondary-600">Full-Stack Developer</span>
-            </motion.h1>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed"
-            >
-              I create beautiful, functional, and user-friendly web applications that help businesses grow and succeed in the digital world.
-            </motion.p>
-
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
-              <Link
-                to="/projects"
-                className="btn btn-primary btn-lg group"
+            {/* You had this as a self-closing div */}
+            <div className="space-y-8">
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }} 
               >
-                View My Work
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/contact"
-                className="btn btn-outline btn-lg"
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium">
+                <Zap className="w-4 h-4 mr-2" />
+                Available for new projects
+                </div>
+              </motion.div>
+
+              {/* Main heading */}
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.8 }}
+                
               >
-                Get In Touch
-              </Link>
-            </motion.div>
+                <div className="text-5xl md:text-7xl font-bold text-balance">
+                Hi, I'm{' '}
+                <span className="gradient-text">McAnthony</span>
+                <br />
+                <span className="text-secondary-600">Full-Stack Developer</span>
+                </div>
+              </motion.h1>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+                
+              >
+                <div className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
+                I create beautiful, functional, and user-friendly web applications that help businesses grow and succeed in the digital world.
+                </div>
+              </motion.p>
+
+              {/* CTA Buttons */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.8 }}
+                
+              >
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link to="/projects" className="btn btn-primary btn-lg group">
+                  View My Work
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link to="/contact" className="btn btn-outline btn-lg">
+                  Get In Touch
+                </Link>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
 
@@ -127,19 +133,24 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          
         >
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-secondary-300 rounded-full flex justify-center"
+          
           >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-secondary-400 rounded-full mt-2"
-            />
+            <div className="w-6 h-10 border-2 border-secondary-300 rounded-full flex justify-center">
+             <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <div className="w-1 h-3 bg-secondary-400 rounded-full mt-2" />
+              </motion.div>
+            </div>
           </motion.div>
+        </div>
         </motion.div>
       </section>
 
@@ -151,14 +162,16 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            
           >
+            <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-secondary-900 mb-4">
               What I Do
             </h2>
             <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
               I specialize in creating modern web applications that are both beautiful and functional.
             </p>
+            </div>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -169,8 +182,9 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
-                className="group"
+
               >
+                <div className="group">
                 <div className="card p-6 text-center hover:shadow-lg transition-all duration-300 group-hover:-translate-y-2">
                   <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center`}>
                     <feature.icon className="w-8 h-8 text-white" />
@@ -181,6 +195,7 @@ const Home = () => {
                   <p className="text-secondary-600">
                     {feature.description}
                   </p>
+                </div>
                 </div>
               </motion.div>
             ))}
@@ -199,13 +214,15 @@ const Home = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center"
+                
               >
+                <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold mb-2">
                   {stat.number}
                 </div>
                 <div className="text-lg opacity-90">
                   {stat.label}
+                </div>
                 </div>
               </motion.div>
             ))}
@@ -221,8 +238,9 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-8"
+            
           >
+            <div className="space-y-8">
             <h2 className="text-4xl font-bold text-secondary-900">
               Ready to Start Your Project?
             </h2>
@@ -230,18 +248,13 @@ const Home = () => {
               Let's work together to bring your ideas to life. I'm here to help you create something amazing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="btn btn-primary btn-lg"
-              >
+              <Link to="/contact" className="btn btn-primary btn-lg">
                 Start a Project
               </Link>
-              <Link
-                to="/about"
-                className="btn btn-outline btn-lg"
-              >
+              <Link to="/about" className="btn btn-outline btn-lg">
                 Learn More About Me
               </Link>
+            </div>
             </div>
           </motion.div>
         </div>
@@ -250,4 +263,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
+export default Home;
