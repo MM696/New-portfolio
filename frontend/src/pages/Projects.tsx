@@ -10,7 +10,7 @@ const sampleProjects = [
   {
     id: 2,
     title: "E-commerce Store",
-    link: "https://dazzling-halva-24bd54.netlify.app/",
+    link: "https://getspares.net/",
     image: "/images/img_7.png",
   },
   {
