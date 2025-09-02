@@ -1,25 +1,28 @@
 import Contact from '../models/Contact.js';
 import nodemailer from 'nodemailer';
+import dotenv from 'dotenv';
+
+dotenv.config(); 
 
 // Create transporter for email
 const createTransporter = () => {
-  return nodemailer.createTransporter({
+  return nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.EMAIL_USER,
-      pass: process.env.EMAIL_PASS
-    }
+      user: process.env.EMAIL_USER, 
+      pass: process.env.EMAIL_PASS, 
+    },
   });
 };
 
-// Send email notification
+// Send email notification to yourself (admin)
 const sendEmailNotification = async (contactData) => {
   try {
     const transporter = createTransporter();
-    
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER, // Send to yourself
+      to: process.env.EMAIL_USER, // Send to your email
       subject: `New Contact Form Submission: ${contactData.subject}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -30,24 +33,24 @@ const sendEmailNotification = async (contactData) => {
         <p>${contactData.message}</p>
         ${contactData.phone ? `<p><strong>Phone:</strong> ${contactData.phone}</p>` : ''}
         ${contactData.company ? `<p><strong>Company:</strong> ${contactData.company}</p>` : ''}
-        <p><strong>Budget:</strong> ${contactData.budget}</p>
-        <p><strong>Timeline:</strong> ${contactData.timeline}</p>
+        ${contactData.budget ? `<p><strong>Budget:</strong> ${contactData.budget}</p>` : ''}
+        ${contactData.timeline ? `<p><strong>Timeline:</strong> ${contactData.timeline}</p>` : ''}
         <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
-      `
+      `,
     };
 
     await transporter.sendMail(mailOptions);
-    console.log('Email notification sent successfully');
+    console.log('✅ Email notification sent successfully');
   } catch (error) {
-    console.error('Error sending email notification:', error);
+    console.error('❌ Error sending email notification:', error.message);
   }
 };
 
-// Send auto-reply to contact
+// Send auto-reply to the user
 const sendAutoReply = async (contactData) => {
   try {
     const transporter = createTransporter();
-    
+
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: contactData.email,
@@ -64,82 +67,76 @@ const sendAutoReply = async (contactData) => {
         </div>
         <p>I typically respond within 24-48 hours during business days.</p>
         <p>Best regards,<br>Your Name</p>
-      `
+      `,
     };
 
     await transporter.sendMail(mailOptions);
-    console.log('Auto-reply sent successfully');
+    console.log('✅ Auto-reply sent successfully');
   } catch (error) {
-    console.error('Error sending auto-reply:', error);
+    console.error('❌ Error sending auto-reply:', error.message);
   }
 };
+
+export { sendEmailNotification, sendAutoReply };
+
 
 // Submit contact form
 export const submitContact = async (req, res) => {
   try {
-    const contactData = {
-      ...req.body,
-      ipAddress: req.ip || req.connection.remoteAddress,
-      userAgent: req.get('User-Agent')
-    };
+    console.log('📩 Incoming contact form submission');
+    console.log('Request body (parsed):', req.body);
 
-    // Validate required fields
-    const requiredFields = ['name', 'email', 'subject', 'message'];
-    for (const field of requiredFields) {
-      if (!contactData[field]) {
-        return res.status(400).json({
-          success: false,
-          error: `${field} is required`
-        });
-      }
-    }
-
-    // Check for spam (basic validation)
-    if (contactData.message.length < 10) {
+    if (!req.body || Object.keys(req.body).length === 0) {
+      console.warn('⚠️ Request body is empty');
       return res.status(400).json({
         success: false,
-        error: 'Message must be at least 10 characters long'
+        error: 'Request body is empty'
       });
     }
 
-    // Create contact record
-    const contact = new Contact(contactData);
-    await contact.save();
+    const contactData = {
+      ...req.body,
+      ipAddress: req.ip || req.connection?.remoteAddress,
+      userAgent: req.get('User-Agent')
+    };
 
-    // Send email notifications (in background)
+    console.log('Processed contact data (before save):', contactData);
+
+    const contact = new Contact(contactData);
+
+    console.log('📝 About to save contact...');
+    const savedContact = await contact.save();
+    console.log('✅ Contact saved successfully:', savedContact);
+
     Promise.all([
       sendEmailNotification(contactData),
       sendAutoReply(contactData)
-    ]).catch(error => {
-      console.error('Error sending emails:', error);
-    });
+    ]).catch(error => console.error('❌ Error sending emails:', error));
 
     res.status(201).json({
       success: true,
       message: 'Thank you for your message! I\'ll get back to you soon.',
-      data: {
-        id: contact._id,
-        submittedAt: contact.createdAt
-      }
+      data: { id: savedContact._id, submittedAt: savedContact.createdAt }
     });
   } catch (error) {
-    console.error('Error submitting contact form:', error);
-    
+    console.error('❌ Error submitting contact form:', error);
     if (error.name === 'ValidationError') {
       const errors = Object.values(error.errors).map(err => err.message);
+      console.error('❌ Validation errors:', errors);
       return res.status(400).json({
         success: false,
         error: 'Validation failed',
         details: errors
       });
     }
-
     res.status(500).json({
       success: false,
       error: 'Failed to submit contact form'
     });
   }
 };
+
+
 
 // Get all contact submissions (admin only)
 export const getContacts = async (req, res) => {
