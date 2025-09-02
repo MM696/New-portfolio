@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+console.log('✅ Loading Contact Schema...');
+
 const contactSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -13,7 +15,7 @@ const contactSchema = new mongoose.Schema({
     lowercase: true,
     trim: true,
     validate: {
-      validator: function(v) {
+      validator: function (v) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
       },
       message: 'Please enter a valid email address'
@@ -73,16 +75,16 @@ const contactSchema = new mongoose.Schema({
   timestamps: true
 });
 
-// Index for better query performance
+// Indexes for faster queries
 contactSchema.index({ status: 1, createdAt: -1 });
 contactSchema.index({ email: 1 });
 contactSchema.index({ createdAt: -1 });
 
-// Virtual for time since creation
-contactSchema.virtual('timeSinceCreation').get(function() {
+// Virtual field for human-readable creation time
+contactSchema.virtual('timeSinceCreation').get(function () {
   const now = new Date();
   const diffInHours = Math.floor((now - this.createdAt) / (1000 * 60 * 60));
-  
+
   if (diffInHours < 1) return 'Just now';
   if (diffInHours < 24) return `${diffInHours} hours ago`;
   const diffInDays = Math.floor(diffInHours / 24);
@@ -91,17 +93,25 @@ contactSchema.virtual('timeSinceCreation').get(function() {
   return `${Math.floor(diffInDays / 30)} months ago`;
 });
 
-// Pre-save middleware to sanitize data
-contactSchema.pre('save', function(next) {
-  // Remove extra whitespace
+// Pre-save middleware with logging
+contactSchema.pre('save', function (next) {
+  console.log('📝 Pre-save hook triggered for Contact:', this);
+
+  // Trim & sanitize inputs
   if (this.name) this.name = this.name.trim();
   if (this.email) this.email = this.email.trim().toLowerCase();
   if (this.subject) this.subject = this.subject.trim();
   if (this.message) this.message = this.message.trim();
   if (this.phone) this.phone = this.phone.trim();
   if (this.company) this.company = this.company.trim();
-  
+
+  console.log('✨ Sanitized contact data ready to save:', this);
   next();
 });
 
-export default mongoose.model('Contact', contactSchema); 
+// Post-save logging
+contactSchema.post('save', function (doc) {
+  console.log('✅ Contact successfully saved in DB:', doc);
+});
+
+export default mongoose.model('Contact', contactSchema);
