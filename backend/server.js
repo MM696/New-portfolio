@@ -13,6 +13,7 @@ import { fileURLToPath } from 'url';
 //import authRoutes from './routes/auth.js';
 //import blogRoutes from './routes/blog.js';
 import contactRoutes from './routes/contact.js';
+import aiRoutes from "./routes/aiRoutes.js";
 
 // Load environment variables
 dotenv.config();
@@ -105,6 +106,7 @@ console.log('🛣️ Mounting routes...');
 //app.use('/api', mockRoutes);
 //app.use('/api/auth', authRoutes);
 //app.use('/api/blog', blogRoutes);
+app.use("/api", aiRoutes);
 app.use('/api', contactRoutes);
 console.log('📌 Contact routes mounted at /api');
 // Health check route
@@ -130,6 +132,10 @@ app.use((err, req, res, next) => {
 app.post('/api/test', (req, res) => {
   console.log('Test route hit');
   res.status(200).json({ message: 'Test successful' });
+});
+
+app.get("/test-key", (req, res) => {
+  res.send({ key: process.env.GEMINI_API_KEY });
 });
 
 // =======================

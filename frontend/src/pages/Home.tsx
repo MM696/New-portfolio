@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Code, Palette, Smartphone, Database, Zap } from 'lucide-react';
+import ChatBot from "../components/ChatBot";
 
 const Home = () => {
   const features = [
@@ -259,6 +260,11 @@ const Home = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Floating AI Chatbot */}
+      <div className="fixed bottom-6 right-6 z-50 shadow-lg">
+        <ChatBot />
+    </div>
     </div>
   );
 };
