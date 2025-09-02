@@ -13,7 +13,10 @@ import { fileURLToPath } from 'url';
 //import authRoutes from './routes/auth.js';
 //import blogRoutes from './routes/blog.js';
 import contactRoutes from './routes/contact.js';
+<<<<<<< HEAD
 import aiRoutes from "./routes/aiRoutes.js";
+=======
+>>>>>>> 72678a2e6f450b3e4aadecdb6e463adb62efe52b
 
 // Load environment variables
 dotenv.config();
@@ -106,7 +109,10 @@ console.log('🛣️ Mounting routes...');
 //app.use('/api', mockRoutes);
 //app.use('/api/auth', authRoutes);
 //app.use('/api/blog', blogRoutes);
+<<<<<<< HEAD
 app.use("/api", aiRoutes);
+=======
+>>>>>>> 72678a2e6f450b3e4aadecdb6e463adb62efe52b
 app.use('/api', contactRoutes);
 console.log('📌 Contact routes mounted at /api');
 // Health check route
@@ -134,10 +140,13 @@ app.post('/api/test', (req, res) => {
   res.status(200).json({ message: 'Test successful' });
 });
 
+<<<<<<< HEAD
 app.get("/test-key", (req, res) => {
   res.send({ key: process.env.GEMINI_API_KEY });
 });
 
+=======
+>>>>>>> 72678a2e6f450b3e4aadecdb6e463adb62efe52b
 // =======================
 // 404 Handler
 // =======================

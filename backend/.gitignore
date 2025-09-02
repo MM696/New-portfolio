@@ -1,3 +1,7 @@
 node_modules
+<<<<<<< HEAD
 .env
 keys
+=======
+.env
+>>>>>>> 72678a2e6f450b3e4aadecdb6e463adb62efe52b
