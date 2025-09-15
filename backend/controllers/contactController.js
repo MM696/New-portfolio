@@ -66,7 +66,7 @@ const sendAutoReply = async (contactData) => {
           <p>${contactData.message}</p>
         </div>
         <p>I typically respond within 24-48 hours during business days.</p>
-        <p>Best regards,<br>Your Name</p>
+        <p>Best regards,<br>Macanthony Eze</p>
       `,
     };
 
