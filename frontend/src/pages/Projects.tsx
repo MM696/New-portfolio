@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Filter, Star } from "lucide-react";
-import { useState } from "react";
+import { Github, ExternalLink, Filter, Star, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const sampleProjects = [
   {
     id: 1,
-    title: "Blog Platform",
-    link: "https://blog-post-eiyc.onrender.com/",
-    code: "https://github.com/Elilaw179/blog-platform",
-    image: "/images/img_6.png",
-    tech: ["React", "Express", "Supabase"],
+    title: "Car Rental Platform",
+    link: "https://carrental-41y5.onrender.com/",
+    code: "https://github.com/MM696/CarRental",
+    images: ["/images/img_6.png", "/images/img_6a.png"],
+    tech: ["React", "TypeScript", "Tailwind CSS", "Redux", "NodeJS", "Express", "MongoDB"],
     description:
-      "A full-featured blog platform where users can create, edit, and delete posts with secure authentication and database storage.",
+      "A comprehensive car rental platform featuring vehicle browsing, booking management, user authentication, and payment processing. Built with modern web technologies for seamless user experience and robust backend functionality.",
     category: "Full Stack",
     featured: true,
     year: "2024",
@@ -19,35 +19,130 @@ const sampleProjects = [
   },
   {
     id: 2,
-    title: "E-commerce Store",
-    link: "https://getspares.net/",
-    code: "https://github.com/Elilaw179/ecommerce-store",
-    image: "/images/img_7.png",
-    tech: ["React", "Node.js", "PostgreSQL"],
+    title: "An Online Cooperative Contribution Website",
+    link: "https://cooperative-website.vercel.app/",
+    code: "https://github.com/MM696/cooperative_website",
+    images: ["/images/img_7.png", "/images/img_7a.png"],
+    tech: ["NextJS", "TypeScript", "Tailwind CSS", "Supabase"],
     description:
-      "An online marketplace for auto parts with product management, vendor dashboard, and secure payment integration.",
+      "A comprehensive cooperative platform enabling members to contribute, track investments, and manage shared resources. Features real-time contribution tracking, member management, and financial transparency with modern web technologies.",
     category: "Full Stack",
     featured: true,
-    year: "2024",
+    year: "2025",
     status: "Live"
   },
   {
     id: 3,
-    title: "Travel Tracker",
-    link: "https://family-travel-tracker-project.onrender.com/",
-    code: "https://github.com/Elilaw179/travel-tracker",
-    image: "/images/img_8.png",
-    tech: ["EJS", "Express", "MongoDB"],
+    title: "An Admin Dashboard for a Cooperative Contribution Website",
+    link: "https://cooperative-website.vercel.app/auth/admin",
+    code: "https://github.com/MM696/cooperative_website",
+    images: ["/images/img_8.png", "/images/img_8a.png"],
+    tech: ["NextJS", "TypeScript", "Tailwind CSS", "Supabase", "EmailJS"],
     description:
-      "A collaborative travel tracking app where families can log trips, share memories, and manage destinations.",
+      "A comprehensive admin dashboard for managing cooperative contributions, member activities, and financial oversight. Features user management, contribution analytics, automated email notifications, and secure admin authentication with real-time data visualization.",
     category: "Full Stack",
     featured: false,
-    year: "2023",
+    year: "2025",
     status: "Live"
   },
 ];
 
-const techFilters = ["All", "React", "Node.js", "Express", "MongoDB", "PostgreSQL", "Supabase", "EJS"];
+const techFilters = ["All", "React", "Tailwind CSS", "NextJS", "NodeJS", "Express", "MongoDB", "PostgreSQL", "Supabase", "EmailJS"];
+
+// ✅ Image Slider Component
+function ImageSlider({ images, title }: { images: string[]; title: string }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  // Auto-slide functionality
+  useEffect(() => {
+    if (!isHovered) {
+      const interval = setInterval(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [images.length, isHovered]);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  return (
+    <div 
+      className="relative group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Main Image Container */}
+      <div className="relative overflow-hidden">
+        <motion.div
+          key={currentIndex}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
+        >
+          <img
+            src={images[currentIndex]}
+            alt={`${title} - Image ${currentIndex + 1}`}
+            className="w-full h-56 object-cover transition-transform duration-500"
+          />
+        </motion.div>
+
+        {/* Navigation Arrows */}
+        <div className="absolute inset-y-0 left-0 flex items-center">
+          <button
+            onClick={goToPrevious}
+            className="p-2 bg-black/50 text-white rounded-r-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/70"
+          >
+            <ChevronLeft size={20} />
+          </button>
+        </div>
+        
+        <div className="absolute inset-y-0 right-0 flex items-center">
+          <button
+            onClick={goToNext}
+            className="p-2 bg-black/50 text-white rounded-l-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-black/70"
+          >
+            <ChevronRight size={20} />
+          </button>
+        </div>
+
+        {/* Image Counter */}
+        <div className="absolute bottom-4 left-4">
+          <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-black/70 text-white text-xs font-medium">
+            <span>{currentIndex + 1} / {images.length}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Dots Indicator */}
+      <div className="absolute bottom-2 right-4 flex gap-1">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              index === currentIndex 
+                ? 'bg-white scale-125' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 // ✅ Enhanced project card component
 function ProjectCard({
@@ -55,6 +150,7 @@ function ProjectCard({
   link,
   code,
   image,
+  images,
   tech,
   description,
   category,
@@ -66,7 +162,8 @@ function ProjectCard({
   title: string;
   link: string;
   code: string;
-  image: string;
+  image?: string;
+  images?: string[];
   tech: string[];
   description: string;
   category: string;
@@ -94,15 +191,21 @@ function ProjectCard({
           </div>
         )}
 
-        {/* Project Image */}
+        {/* Project Image(s) */}
         <div className="relative overflow-hidden">
-          <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-            <img
-              src={image}
-              alt={title}
-              className="w-full h-56 object-cover transition-transform duration-500"
-            />
-          </motion.div>
+          {images && images.length > 1 ? (
+            // Multiple images - Image Slider
+            <ImageSlider images={images} title={title} />
+          ) : (
+            // Single image
+            <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
+              <img
+                src={image || (images && images[0])}
+                alt={title}
+                className="w-full h-56 object-cover transition-transform duration-500"
+              />
+            </motion.div>
+          )}
           
           {/* Overlay on hover */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
