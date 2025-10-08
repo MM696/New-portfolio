@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Palette, Smartphone, Database, Zap, Star, Quote, ExternalLink } from 'lucide-react';
+import { ArrowRight, Code, Palette, Smartphone, Database, Zap, Star, Quote, ExternalLink, FileText, Layers, GitBranch, Github, Globe, Terminal, Circle, Square, Hexagon } from 'lucide-react';
 import ChatBot from "../components/ChatBot";
 
 const Home = () => {
@@ -46,13 +46,13 @@ const Home = () => {
       rating: 5
     },
     {
-      name: "Michael Chen",
+      name: "Michael Adetunji",
       role: "Product Manager, InnovateLab",
       content: "Working with McAnthony was a game-changer. He transformed our vision into a beautiful, functional web application that our users love.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
+      name: "Ikemefuna A",
       role: "Founder, CreativeStudio",
       content: "Professional, reliable, and incredibly talented. McAnthony's full-stack development skills helped us launch our platform successfully.",
       rating: 5
@@ -60,12 +60,20 @@ const Home = () => {
   ];
 
   const skills = [
-    { name: "React", level: 95, color: "from-blue-500 to-cyan-500" },
-    { name: "Node.js", level: 90, color: "from-green-500 to-emerald-500" },
-    { name: "TypeScript", level: 88, color: "from-blue-600 to-blue-800" },
-    { name: "MongoDB", level: 85, color: "from-green-600 to-green-800" },
-    { name: "PostgreSQL", level: 82, color: "from-blue-700 to-indigo-700" },
-    { name: "AWS", level: 80, color: "from-orange-500 to-yellow-500" }
+    { name: "React", level: 95, color: "from-blue-500 to-cyan-500", icon: Code },
+    { name: "Next.js", level: 90, color: "from-gray-600 to-gray-800", icon: Globe },
+    { name: "JavaScript", level: 95, color: "from-yellow-500 to-orange-500", icon: Code },
+    { name: "TypeScript", level: 88, color: "from-blue-600 to-blue-800", icon: FileText },
+    { name: "Node.js", level: 90, color: "from-green-500 to-emerald-500", icon: Terminal },
+    { name: "Express.js", level: 85, color: "from-green-600 to-green-800", icon: Terminal },
+    { name: "PostgreSQL", level: 82, color: "from-blue-700 to-indigo-700", icon: Database },
+    { name: "MongoDB", level: 85, color: "from-green-600 to-green-800", icon: Database },
+    { name: "HTML5", level: 95, color: "from-orange-500 to-red-500", icon: Square },
+    { name: "CSS3", level: 95, color: "from-blue-500 to-blue-700", icon: Circle },
+    { name: "Redux", level: 80, color: "from-purple-500 to-pink-500", icon: Hexagon },
+    { name: "Git", level: 85, color: "from-orange-600 to-red-600", icon: GitBranch },
+    { name: "GitHub", level: 85, color: "from-gray-700 to-gray-900", icon: Github },
+    { name: "AWS", level: 80, color: "from-orange-500 to-yellow-500", icon: Layers }
   ];
 
   const recentWork = [
@@ -287,7 +295,12 @@ const Home = () => {
               >
                 <div className="bg-white rounded-xl p-6 shadow-soft hover:shadow-lg transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-secondary-900">{skill.name}</h3>
+                  <div className="flex items-center gap-3">
+                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${skill.color} flex items-center justify-center`}>
+                      <skill.icon className="w-4 h-4 text-white" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-secondary-900">{skill.name}</h3>
+                  </div>
                   <span className="text-sm font-medium text-primary-600">{skill.level}%</span>
                 </div>
                 <div className="w-full bg-secondary-200 rounded-full h-2">

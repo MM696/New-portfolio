@@ -25,13 +25,13 @@ const Contact = () => {
       rating: 5
     },
     {
-      name: "Michael Chen",
+      name: "Michael Adetunji",
       role: "Product Manager, InnovateLab",
       content: "Working with McAnthony was a game-changer. He transformed our vision into a beautiful, functional web application.",
       rating: 5
     },
     {
-      name: "Emily Rodriguez",
+      name: "Ikemefuna A",
       role: "Founder, CreativeStudio",
       content: "Professional, reliable, and incredibly talented. McAnthony's development skills helped us launch successfully.",
       rating: 5

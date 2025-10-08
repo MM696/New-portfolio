@@ -14,22 +14,22 @@ const About = () => {
       title: 'Full-Stack Developer',
       company: 'Machine and Equipment Corporation of Africa',
       period: '2025 - Present',
-      description: 'Leading development of web application for e-commerce.',
-      achievements: ['Led team of 3 developers', 'Improved performance by 40%', 'Implemented CI/CD pipeline']
+      description: 'Architected and developed a comprehensive e-commerce platform for industrial machinery and equipment sales. Built scalable full-stack solutions with modern technologies, integrating payment gateways, inventory management, and customer relationship management systems for B2B transactions.',
+      achievements: ['Built scalable e-commerce platform handling over 1000 products', 'Integrated secure payment processing and multi-currency support', 'Developed automated inventory management reducing manual work by 60%', 'Implemented responsive design serving over 600 monthly active users']
     },
     {
       title: 'Backend Developer',
       company: 'Bejite Inc',
       period: '2025 - present',
-      description: 'Built scalable web applications and mobile apps for various clients.',
-      achievements: ['Developed 5+ mobile apps', 'Reduced server costs by 30%', 'Implemented microservices architecture']
+      description: 'Developed and maintained a comprehensive job portal platform connecting employers with qualified candidates. Built robust REST APIs, implemented advanced search algorithms, and designed scalable database architecture for handling thousands of job postings and user profiles.',
+      achievements: ['Built RESTful APIs serving over 1000 daily requests', 'Implemented advanced search with filters and geolocation', 'Optimized database queries reducing response time by 50%', 'Integrated third-party authentication and payment systems']
     },
     {
       title: 'Frontend Developer',
       company: 'Skye Studios',
       period: '2024 - 2025',
-      description: 'Created responsive websites and user interfaces for clients.',
-      achievements: ['Delivered 10+ client projects', 'Achieved 95% client satisfaction', 'Mentored junior developers']
+      description: 'Developed interactive video editing interfaces and multimedia web applications using KonvaJS and modern frontend technologies. Built responsive user interfaces with real-time canvas manipulation, drag-and-drop functionality, and seamless video processing capabilities for creative professionals.',
+      achievements: ['Built more than 2 interactive video editing interfaces with KonvaJS', 'Implemented real-time canvas manipulation and video filters', 'Reduced interface load time by 40% through code optimization', 'Created reusable component library used across 7 projects']
     }
   ];
 
@@ -48,7 +48,7 @@ const About = () => {
     },
     {
       title: 'Tech Mentor',
-      description: 'Mentoring 5+ junior developers in web development',
+      description: 'Mentored a junior developer in web development',
       year: '2023-Present',
       icon: Users
     }
