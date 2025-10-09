@@ -60,36 +60,38 @@ const Home = () => {
   ];
 
   const skills = [
-    { name: "React", level: 95, color: "from-blue-500 to-cyan-500", icon: Code },
-    { name: "Next.js", level: 90, color: "from-gray-600 to-gray-800", icon: Globe },
-    { name: "JavaScript", level: 95, color: "from-yellow-500 to-orange-500", icon: Code },
-    { name: "TypeScript", level: 88, color: "from-blue-600 to-blue-800", icon: FileText },
-    { name: "Node.js", level: 90, color: "from-green-500 to-emerald-500", icon: Terminal },
-    { name: "Express.js", level: 85, color: "from-green-600 to-green-800", icon: Terminal },
-    { name: "PostgreSQL", level: 82, color: "from-blue-700 to-indigo-700", icon: Database },
-    { name: "MongoDB", level: 85, color: "from-green-600 to-green-800", icon: Database },
-    { name: "HTML5", level: 95, color: "from-orange-500 to-red-500", icon: Square },
-    { name: "CSS3", level: 95, color: "from-blue-500 to-blue-700", icon: Circle },
-    { name: "Redux", level: 80, color: "from-purple-500 to-pink-500", icon: Hexagon },
-    { name: "Git", level: 85, color: "from-orange-600 to-red-600", icon: GitBranch },
-    { name: "GitHub", level: 85, color: "from-gray-700 to-gray-900", icon: Github },
-    { name: "AWS", level: 80, color: "from-orange-500 to-yellow-500", icon: Layers }
+    { name: "React", level: 95, color: "from-blue-500 to-cyan-500", icon: Code, customIcon: "/images/React.png" },
+    { name: "Next.js", level: 90, color: "from-gray-600 to-gray-800", icon: Globe, customIcon: "/images/NextJS.png" },
+    { name: "JavaScript", level: 95, color: "from-yellow-500 to-orange-500", icon: Code, customIcon: "/images/Javascript.png" },
+    { name: "TypeScript", level: 88, color: "from-blue-600 to-blue-800", icon: FileText, customIcon: "/images/Typescript.png" },
+    { name: "Node.js", level: 90, color: "from-green-500 to-emerald-500", icon: Terminal, customIcon: "/images/NodeJS.png" },
+    { name: "Express.js", level: 85, color: "from-green-600 to-green-800", icon: Terminal, customIcon: "/images/ExpressJS.png" },
+    { name: "PostgreSQL", level: 82, color: "from-blue-700 to-indigo-700", icon: Database, customIcon: "/images/PostgreSQL.svg" },
+    { name: "MongoDB", level: 85, color: "from-green-600 to-green-800", icon: Database, customIcon: "/images/MongoDB.jpg" },
+    { name: "HTML5", level: 95, color: "from-orange-500 to-red-500", icon: Square, customIcon: "/images/HTML5.webp" },
+    { name: "CSS3", level: 95, color: "from-blue-500 to-blue-700", icon: Circle, customIcon: "/images/CSS3.png" },
+    { name: "Redux", level: 80, color: "from-purple-500 to-pink-500", icon: Hexagon, customIcon: "/images/Redux.png" },
+    { name: "Git", level: 85, color: "from-orange-600 to-red-600", icon: GitBranch, customIcon: "/images/Git.png" },
+    { name: "GitHub", level: 85, color: "from-gray-700 to-gray-900", icon: Github, customIcon: "/images/Github.svg" },
+    { name: "AWS", level: 80, color: "from-orange-500 to-yellow-500", icon: Layers, customIcon: "/images/Amazon_Web_Services.svg" }
   ];
 
   const recentWork = [
     {
-      title: "E-commerce Platform",
-      description: "Full-stack marketplace with payment integration",
+      title: "An Online Cooperative Contribution Website",
+      description:
+      "A comprehensive cooperative platform enabling members to contribute, track investments, and manage shared resources. Features real-time contribution tracking, member management, and financial transparency with modern web technologies.",
       image: "/images/img_7.png",
-      tech: ["React", "Node.js", "PostgreSQL"],
-      link: "https://getspares.net/"
+      tech: ["NextJS", "TypeScript", "Tailwind CSS", "Supabase"],
+      link: "https://cooperative-website.vercel.app/"
     },
     {
-      title: "Blog Platform",
-      description: "Modern CMS with authentication system",
+      title: "Car Rental Platform",
+      description:
+      "A comprehensive car rental platform featuring vehicle browsing, booking management, user authentication, and payment processing. Built with modern web technologies for seamless user experience and robust backend functionality.",
       image: "/images/img_6.png",
-      tech: ["React", "Express", "Supabase"],
-      link: "https://blog-post-eiyc.onrender.com/"
+      tech: ["React", "TypeScript", "Tailwind CSS", "Redux", "NodeJS", "Express", "MongoDB"],
+      link: "https://carrental-41y5.onrender.com/"
     }
   ];
 
@@ -293,26 +295,70 @@ const Home = () => {
                 transition={{ delay: index * 0.1, duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-white rounded-xl p-6 shadow-soft hover:shadow-lg transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${skill.color} flex items-center justify-center`}>
-                      <skill.icon className="w-4 h-4 text-white" />
+                <div className="bg-white rounded-xl p-6 shadow-soft hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  {/* Background Image for Custom Icons */}
+                  {skill.customIcon && (
+                    <div className="absolute inset-0 opacity-10">
+                      <img 
+                        src={skill.customIcon} 
+                        alt={skill.name}
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          console.log('Custom background icon failed to load:', skill.customIcon);
+                          (e.target as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
                     </div>
-                    <h3 className="text-lg font-semibold text-secondary-900">{skill.name}</h3>
+                  )}
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${skill.color} flex items-center justify-center`}>
+                          {skill.customIcon ? (
+                            <div className="w-6 h-6 flex items-center justify-center">
+                              {skill.name === 'GitHub' || skill.name === 'PostgreSQL' || skill.name === 'AWS' ? (
+                                <img 
+                                  src={skill.customIcon} 
+                                  alt={skill.name}
+                                  className="w-4 h-4"
+                                  style={{ filter: 'brightness(0) invert(1)' }}
+                                  onError={(e) => {
+                                    console.log(`${skill.name} icon failed to load:`, skill.customIcon);
+                                    (e.target as HTMLImageElement).style.display = 'none';
+                                  }}
+                                />
+                              ) : (
+                                <img 
+                                  src={skill.customIcon} 
+                                  alt={skill.name}
+                                  className="w-6 h-6 object-contain"
+                                  onError={(e) => {
+                                    console.log(`${skill.name} icon failed to load:`, skill.customIcon);
+                                    (e.target as HTMLImageElement).style.display = 'none';
+                                  }}
+                                />
+                              )}
+                            </div>
+                          ) : (
+                            <skill.icon className="w-4 h-4 text-white" />
+                          )}
+                        </div>
+                        <h3 className="text-lg font-semibold text-secondary-900">{skill.name}</h3>
+                      </div>
+                      <span className="text-sm font-medium text-primary-600">{skill.level}%</span>
+                    </div>
+                    <div className="w-full bg-secondary-200 rounded-full h-2">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        transition={{ delay: index * 0.1 + 0.3, duration: 1 }}
+                        viewport={{ once: true }}
+                      >
+                        <div className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`} />
+                      </motion.div>
+                    </div>
                   </div>
-                  <span className="text-sm font-medium text-primary-600">{skill.level}%</span>
-                </div>
-                <div className="w-full bg-secondary-200 rounded-full h-2">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ delay: index * 0.1 + 0.3, duration: 1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className={`h-2 rounded-full bg-gradient-to-r ${skill.color}`} />
-                  </motion.div>
-                </div>
                 </div>
               </motion.div>
             ))}
@@ -371,14 +417,15 @@ const Home = () => {
                         </span>
                       ))}
                     </div>
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors"
+                    <button
+                      onClick={() => {
+                        console.log('Button clicked, opening:', project.link);
+                        window.open(project.link, '_blank', 'noopener,noreferrer');
+                      }}
+                      className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-medium transition-colors bg-primary-50 hover:bg-primary-100 border border-primary-200 rounded-lg px-4 py-2 cursor-pointer"
                     >
                       View Project <ExternalLink size={16} />
-                    </a>
+                    </button>
                   </div>
                 </div>
                 </div>
