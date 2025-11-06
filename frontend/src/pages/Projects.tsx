@@ -3,8 +3,23 @@ import { Github, ExternalLink, Filter, Star, ChevronLeft, ChevronRight } from "l
 import { useState, useEffect } from "react";
 
 const sampleProjects = [
-  {
-    id: 1,
+    {
+      id: 1,
+      title: "An Cardiovascular Disease Detection System",
+      link: "https://inspectcare-5eu9.onrender.com/",
+      code: "https://github.com/MM696/inspectcare",
+      images: ["/images/img_8.png", "/images/img_8a.png"],
+      tech: ["React", "Tailwind CSS", "NodeJS", "Express", "PostgreSQL"],
+      description:
+          "A comprehensive cardiovascular disease detection system for detecting cardiovascular diseases using modern web technologies. Features symptom detection, diagnosis and doctor's appointment booking with other features.",
+        category: "Full Stack",
+      featured: false,
+      year: "2023",
+      status: "Live"
+    },
+    
+    {
+      id: 2,
     title: "Car Rental Platform",
     link: "https://carrental-41y5.onrender.com/",
     code: "https://github.com/MM696/CarRental",
@@ -18,33 +33,19 @@ const sampleProjects = [
     status: "Live"
   },
   {
-    id: 2,
+    id: 3,
     title: "An Online Cooperative Contribution Website",
     link: "https://cooperative-website.vercel.app/",
     code: "https://github.com/MM696/cooperative_website",
     images: ["/images/img_7.png", "/images/img_7a.png"],
-    tech: ["NextJS", "TypeScript", "Tailwind CSS", "Supabase"],
+    tech: ["NextJS", "TypeScript", "Tailwind CSS", "Supabase", "EmailJS"],
     description:
       "A comprehensive cooperative platform enabling members to contribute, track investments, and manage shared resources. Features real-time contribution tracking, member management, and financial transparency with modern web technologies.",
     category: "Full Stack",
     featured: true,
     year: "2025",
     status: "Live"
-  },
-  {
-    id: 3,
-    title: "An Admin Dashboard for a Cooperative Contribution Website",
-    link: "https://cooperative-website.vercel.app/auth/admin",
-    code: "https://github.com/MM696/cooperative_website",
-    images: ["/images/img_8.png", "/images/img_8a.png"],
-    tech: ["NextJS", "TypeScript", "Tailwind CSS", "Supabase", "EmailJS"],
-    description:
-      "A comprehensive admin dashboard for managing cooperative contributions, member activities, and financial oversight. Features user management, contribution analytics, automated email notifications, and secure admin authentication with real-time data visualization.",
-    category: "Full Stack",
-    featured: false,
-    year: "2025",
-    status: "Live"
-  },
+  },  
 ];
 
 const techFilters = ["All", "React", "Tailwind CSS", "NextJS", "NodeJS", "Express", "MongoDB", "PostgreSQL", "Supabase", "EmailJS"];
