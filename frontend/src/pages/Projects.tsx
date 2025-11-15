@@ -48,7 +48,7 @@ const sampleProjects = [
   },  
 ];
 
-const techFilters = ["All", "React", "Tailwind CSS", "NextJS", "NodeJS", "Express", "MongoDB", "PostgreSQL", "Supabase", "EmailJS"];
+const techFilters = ["All", "React", "Tailwind CSS", "NextJS", "NodeJS", "Laravel", "Express", "MongoDB", "PostgreSQL", "Supabase", "EmailJS"];
 
 // ✅ Image Slider Component
 function ImageSlider({ images, title }: { images: string[]; title: string }) {
@@ -379,7 +379,7 @@ export default function Projects() {
                 <div className="text-sm text-secondary-500">Featured</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary-600 mb-1">3+</div>
+                <div className="text-3xl font-bold text-primary-600 mb-1">4+</div>
                 <div className="text-sm text-secondary-500">Years Exp</div>
               </div>
               </div>

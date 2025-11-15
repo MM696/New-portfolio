@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Code, Palette, Smartphone, Database, Zap, Star, Quote, ExternalLink, FileText, Layers, GitBranch, Github, Globe, Terminal, Circle, Square, Hexagon } from 'lucide-react';
+import { ArrowRight, Code, Palette, Smartphone, Database, Zap, Star, Quote, ExternalLink, FileText, Layers, GitBranch, Github, Globe, Terminal, Circle, Square, Hexagon, GavelIcon } from 'lucide-react';
 import ChatBot from "../components/ChatBot";
 
 const Home = () => {
@@ -32,8 +32,8 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '10+', label: 'Projects Completed' },
-    { number: '3+', label: 'Years Experience' },
+    { number: '15+', label: 'Projects Completed' },
+    { number: '4+', label: 'Years Experience' },
     { number: '100%', label: 'Client Satisfaction' },
     { number: '24/7', label: 'Support Available' }
   ];
@@ -73,7 +73,8 @@ const Home = () => {
     { name: "Redux", level: 80, color: "from-purple-500 to-pink-500", icon: Hexagon, customIcon: "/images/Redux.png" },
     { name: "Git", level: 85, color: "from-orange-600 to-red-600", icon: GitBranch, customIcon: "/images/Git.png" },
     { name: "GitHub", level: 85, color: "from-gray-700 to-gray-900", icon: Github, customIcon: "/images/Github.svg" },
-    { name: "AWS", level: 80, color: "from-orange-500 to-yellow-500", icon: Layers, customIcon: "/images/Amazon_Web_Services.svg" }
+    { name: "AWS", level: 80, color: "from-orange-500 to-yellow-500", icon: Layers, customIcon: "/images/Amazon_Web_Services.svg" },
+    { name: "Laravel", level: 87, color: "from-red-500 to-red-700", icon: GavelIcon, customIcon: "/images/Laravel.png" }
   ];
 
   const recentWork = [

@@ -79,7 +79,7 @@ const Contact = () => {
       description: "Professional networking and updates",
       value: "Connect with me",
       icon: Linkedin,
-      action: "https://linkedin.com/in/mcanthony",
+      action: "www.linkedin.com/in/macanthony-eze-6aba23345",
       color: "from-blue-600 to-blue-800"
     }
   ];
@@ -213,7 +213,7 @@ const Contact = () => {
                   <div className="text-sm text-secondary-500">Consultation</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">3+</div>
+                  <div className="text-3xl font-bold text-primary-600 mb-1">4+</div>
                   <div className="text-sm text-secondary-500">Years Experience</div>
                 </div>
                 </div>
