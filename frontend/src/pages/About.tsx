@@ -4,16 +4,16 @@ import { Download, Mail, Award, Users, Code, Heart, MapPin, Calendar, Briefcase,
 const About = () => {
   const skills = [
     { category: 'Frontend', items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS'] },
-    { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'MongoDB', 'PostgreSQL'] },
+    { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'Laravel', 'MongoDB', 'PostgreSQL'] },
     { category: 'Mobile', items: ['React Native', 'Flutter', 'iOS Development'] },
-    { category: 'Tools', items: ['Git', 'Docker', 'AWS', 'Figma', 'Jira'] }
+    { category: 'Tools', items: ['Git', 'Docker', 'AWS', 'Figma', 'ClickUp', 'Slack'] }
   ];
 
   const experience = [
     {
       title: 'Full-Stack Developer',
       company: 'Machine and Equipment Corporation of Africa',
-      period: '2025 - Present',
+      period: '2021 - Present',
       description: 'Architected and developed a comprehensive e-commerce platform for industrial machinery and equipment sales. Built scalable full-stack solutions with modern technologies, integrating payment gateways, inventory management, and customer relationship management systems for B2B transactions.',
       achievements: ['Built scalable e-commerce platform handling over 1000 products', 'Integrated secure payment processing and multi-currency support', 'Developed automated inventory management reducing manual work by 60%', 'Implemented responsive design serving over 600 monthly active users']
     },
@@ -27,7 +27,7 @@ const About = () => {
     {
       title: 'Frontend Developer',
       company: 'Skye Studios',
-      period: '2024 - 2025',
+      period: '2022 - 2025',
       description: 'Developed interactive video editing interfaces and multimedia web applications using KonvaJS and modern frontend technologies. Built responsive user interfaces with real-time canvas manipulation, drag-and-drop functionality, and seamless video processing capabilities for creative professionals.',
       achievements: ['Built more than 2 interactive video editing interfaces with KonvaJS', 'Implemented real-time canvas manipulation and video filters', 'Reduced interface load time by 40% through code optimization', 'Created reusable component library used across 7 projects']
     }
@@ -88,7 +88,7 @@ const About = () => {
     {
       year: '2023',
       title: 'Full-Stack Transition',
-      description: 'Expanded into backend development with Node.js and databases.',
+      description: 'Expanded into backend development with Node.js, Laravel and databases.',
       milestone: 'Full-Stack Developer'
     },
     {
@@ -156,7 +156,7 @@ const About = () => {
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 <div className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
-                  A passionate full-stack developer with over 3 years of experience creating beautiful, functional, and user-friendly web applications that solve real-world problems.
+                  A passionate full-stack developer with over 4 years of experience creating beautiful, functional, and user-friendly web applications that solve real-world problems.
                 </div>
               </motion.p>
 
@@ -168,11 +168,11 @@ const About = () => {
               >
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">3+</div>
+                  <div className="text-3xl font-bold text-primary-600 mb-1">4+</div>
                   <div className="text-sm text-secondary-500">Years Experience</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">10+</div>
+                  <div className="text-3xl font-bold text-primary-600 mb-1">15+</div>
                   <div className="text-sm text-secondary-500">Projects Completed</div>
                 </div>
                 <div className="text-center">
@@ -180,7 +180,7 @@ const About = () => {
                   <div className="text-sm text-secondary-500">Client Satisfaction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-600 mb-1">5+</div>
+                  <div className="text-3xl font-bold text-primary-600 mb-1">8+</div>
                   <div className="text-sm text-secondary-500">Technologies</div>
                 </div>
                 </div>
@@ -267,7 +267,7 @@ const About = () => {
                   solutions that solve real-world problems.
                 </p>
                 <p>
-                  My journey in web development started 3 years ago, and since then, I've worked on 
+                  My journey in web development started over 4 years ago, and since then, I've worked on 
                   various projects ranging from simple websites to complex enterprise applications. 
                   I believe in writing clean, maintainable code and staying up-to-date with the latest 
                   technologies and best practices.
@@ -298,7 +298,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Calendar className="w-5 h-5 text-primary-600" />
-                    <span className="text-secondary-600">3+ Years Experience</span>
+                    <span className="text-secondary-600">4+ Years Experience</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Briefcase className="w-5 h-5 text-primary-600" />
