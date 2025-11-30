@@ -6,7 +6,7 @@ const sampleProjects = [
     {
       id: 1,
       title: "An Cardiovascular Disease Detection System",
-      link: "https://inspectcare-5eu9.onrender.com/",
+      link: "https://inspectcare-p1i7.onrender.com/",
       code: "https://github.com/MM696/inspectcare",
       images: ["/images/img_8.png", "/images/img_8a.png"],
       tech: ["React", "Tailwind CSS", "NodeJS", "Express", "PostgreSQL"],
@@ -21,7 +21,7 @@ const sampleProjects = [
     {
       id: 2,
     title: "Car Rental Platform",
-    link: "https://carrental-41y5.onrender.com/",
+    link: "https://carrental-w1sy.onrender.com/",
     code: "https://github.com/MM696/CarRental",
     images: ["/images/img_6.png", "/images/img_6a.png"],
     tech: ["React", "TypeScript", "Tailwind CSS", "Redux", "NodeJS", "Express", "MongoDB"],
