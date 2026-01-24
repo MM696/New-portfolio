@@ -1,2 +1,9 @@
 backend/*.json
+node_modules/
+.env
 backend/*.json
+*.pdf
+*.mp4
+*.zip
+*.exe
+QHAV64.EXE
