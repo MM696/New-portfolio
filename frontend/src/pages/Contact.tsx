@@ -79,7 +79,7 @@ const Contact = () => {
       description: "Professional networking and updates",
       value: "Connect with me",
       icon: Linkedin,
-      action: "www.linkedin.com/in/macanthony-eze-6aba23345",
+      action: "https://www.linkedin.com/in/macanthony-eze-6aba23345",
       color: "from-blue-600 to-blue-800"
     }
   ];

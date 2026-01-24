@@ -11,6 +11,27 @@ const About = () => {
 
   const experience = [
     {
+      title: 'Mobile Application Developer',
+      company: 'Iris EduTech',
+      period: 'Oct 2025 - Present · 4 mos',
+      description: 'Develop and maintain high-quality mobile applications for Android and iOS using modern frameworks (React Native). Build intuitive, responsive, and user-friendly UI/UX based on provided Figma designs. Integrate apps with REST APIs, backend services, and third-party libraries while optimizing application performance, responsiveness, and loading speed.',
+      achievements: ['Developed and maintained mobile applications for Android and iOS using React Native', 'Built intuitive, responsive UI/UX based on Figma designs', 'Integrated apps with REST APIs, backend services, and third-party libraries', 'Optimized application performance, responsiveness, and loading speed', 'Implemented secure authentication, authorization, and data storage mechanisms', 'Deployed applications to Google Play Store and Apple App Store']
+    },
+    {
+      title: 'Web Developer',
+      company: 'Life Analytics',
+      period: 'Dec 2025 - Jan 2026 · 2 mos',
+      description: 'Developed high-performance RESTful APIs using FastAPI and built responsive, modern user interfaces with React and Tailwind CSS. Integrated frontend applications with backend APIs, designed and managed data models using MongoDB, and containerized applications using Docker for consistent development and deployment.',
+      achievements: ['Developed high-performance RESTful APIs using FastAPI', 'Built responsive and modern user interfaces with React and Tailwind CSS', 'Integrated frontend applications with backend APIs', 'Designed and managed data models using MongoDB', 'Containerized applications using Docker for consistent development and deployment', 'Implemented authentication, validation, and error handling']
+    },
+    {
+      title: 'Full-stack Developer',
+      company: 'NUVO MEDIA LAB',
+      period: 'Nov 2025 - Jan 2026 · 3 mos',
+      description: 'Developed, maintained, and optimized web applications using Laravel and modern PHP practices. Designed and implemented RESTful APIs, backend logic, and database structures. Built responsive, user-friendly frontends using React and Tailwind CSS while integrating third-party services such as payment gateways, SMS/Email APIs, and authentication providers.',
+      achievements: ['Developed and optimized web applications using Laravel and modern PHP practices', 'Designed and implemented RESTful APIs, backend logic, and database structures', 'Built responsive, user-friendly frontends using React and Tailwind CSS', 'Integrated third-party services including payment gateways and SMS/Email APIs', 'Managed databases (MySQL/PostgreSQL) with optimized queries and data integrity', 'Set up and maintained CI/CD pipelines for automated testing and deployment']
+    },
+    {
       title: 'Full-Stack Developer',
       company: 'Machine and Equipment Corporation of Africa',
       period: '2021 - Present',
