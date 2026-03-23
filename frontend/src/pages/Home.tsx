@@ -162,7 +162,7 @@ const Home = () => {
                   Hi, I'm{' '}
                   <span className="gradient-text">McAnthony</span>
                   <br />
-                  <span className="text-secondary-600">Full-Stack Developer</span>
+                  <span className="text-secondary-600">Software Engineer</span>
                 </div>
               </motion.h1>
 
@@ -173,7 +173,7 @@ const Home = () => {
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 <div className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
-                  I create beautiful, functional, and user-friendly web applications that help businesses grow and succeed in the digital world.
+                  I create beautiful, functional, and user-friendly software applications that help businesses grow and succeed in the digital world.
                 </div>
               </motion.p>
 

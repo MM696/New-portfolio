@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 
 interface LayoutProps {
   children: ReactNode;
@@ -36,10 +36,9 @@ const Layout = ({ children }: LayoutProps) => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/yourusername', icon: Github },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/yourusername', icon: Twitter },
-    { name: 'Email', href: 'mailto:your.email@example.com', icon: Mail },
+    { name: 'GitHub', href: 'https://github.com/MM696/', icon: Github },
+    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/macanthony-eze-6aba23345/', icon: Linkedin },
+    { name: 'Email', href: 'mailto:mcanthonyarinze@gmail.com', icon: Mail },
   ];
 
   return (
