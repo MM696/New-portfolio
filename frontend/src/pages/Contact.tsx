@@ -21,7 +21,7 @@ const Contact = () => {
     {
       name: "Sarah Johnson",
       role: "CEO, TechStart Inc.",
-      content: "McAnthony delivered an exceptional project that exceeded our expectations. His communication and technical expertise are outstanding.",
+      content: "MacAnthony delivered an exceptional project that exceeded our expectations. His communication and technical expertise are outstanding.",
       rating: 5
     },
     {

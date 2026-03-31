@@ -92,7 +92,7 @@ const Home = () => {
       "A comprehensive car rental platform featuring vehicle browsing, booking management, user authentication, and payment processing. Built with modern web technologies for seamless user experience and robust backend functionality.",
       image: "/images/img_6.png",
       tech: ["React", "TypeScript", "Tailwind CSS", "Redux", "NodeJS", "Express", "MongoDB"],
-      link: "https://carrental-41y5.onrender.com/"
+      link: "https://carrental-w1sy.onrender.com/"
     }
   ];
 
@@ -160,7 +160,7 @@ const Home = () => {
               >
                 <div className="text-5xl md:text-7xl font-bold text-balance">
                   Hi, I'm{' '}
-                  <span className="gradient-text">McAnthony</span>
+                  <span className="gradient-text">MacAnthony</span>
                   <br />
                   <span className="text-secondary-600">Software Engineer</span>
                 </div>
