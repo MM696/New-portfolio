@@ -74,7 +74,10 @@ const Home = () => {
     { name: "Git", level: 85, color: "from-orange-600 to-red-600", icon: GitBranch, customIcon: "/images/Git.png" },
     { name: "GitHub", level: 85, color: "from-gray-700 to-gray-900", icon: Github, customIcon: "/images/Github.svg" },
     { name: "AWS", level: 80, color: "from-orange-500 to-yellow-500", icon: Layers, customIcon: "/images/Amazon_Web_Services.svg" },
-    { name: "Laravel", level: 87, color: "from-red-500 to-red-700", icon: GavelIcon, customIcon: "/images/Laravel.png" }
+    { name: "Laravel", level: 87, color: "from-red-500 to-red-700", icon: GavelIcon, customIcon: "/images/Laravel.png" },
+    { name: "Python", level: 80, color: "from-yellow-500 to-orange-500", icon: Code, customIcon: "/images/python.png" },
+    { name: "Flutter", level: 85, color: "from-blue-500 to-blue-700", icon: Code, customIcon: "/images/flutter.png" },
+    { name: "NestJS", level: 75, color: "from-[#E92747] to-[#b51d37]", icon: Code, customIcon: "/images/nestjs.png" },
   ];
 
   const recentWork = [

@@ -11,30 +11,46 @@ const About = () => {
 
   const experience = [
     {
+      title: 'Software Engineer',
+      company: 'Lead Web Praxis Media',
+      period: '2026 - present',
+      description: 'Designed and maintained high-performance cross-platform mobile applications for Android and iOS using Flutter and Dart. Delivered scalable, user-centric solutions by translating Figma designs into responsive and intuitive UI/UX. Integrated REST APIs, backend services, and third-party platforms including Mono for secure financial data access, while implementing geofencing and real-time push notifications. Focused on performance optimization, security, and seamless user experience across devices.',
+
+      achievements: [
+        'Engineered and maintained cross-platform mobile applications using Flutter and Dart with a focus on scalability and performance',
+        'Translated Figma designs into pixel-perfect, responsive, and user-friendly interfaces',
+        'Integrated REST APIs, backend services, and third-party libraries including Mono for secure financial connectivity',
+        'Implemented geofencing features to enable location-based services and real-time user engagement',
+        'Built and integrated push notification systems using Firebase Cloud Messaging (FCM) and Apple Push Notification service (APNs)',
+        'Optimized application performance, reducing load times and improving responsiveness across devices',
+        'Implemented secure authentication, authorization, and encrypted data storage mechanisms',
+        'Successfully deployed and maintained applications on Google Play Store and Apple App Store'
+      ]},
+    {
       title: 'Mobile Application Developer',
-      company: 'Iris EduTech',
-      period: 'Oct 2025 - Present',
-      description: 'Develop and maintain high-quality mobile applications for Android and iOS using modern frameworks (React Native). Build intuitive, responsive, and user-friendly UI/UX based on provided Figma designs. Integrate apps with REST APIs, backend services, and third-party libraries while optimizing application performance, responsiveness, and loading speed.',
+      company: 'Iris Media and Tech Limited',
+      period: 'Oct 2025 - 2026',
+      description: 'Develop and maintain high-quality mobile applications for Android and iOS using Expo and React Native. Build intuitive, responsive, and user-friendly UI/UX based on provided Figma designs. Integrate apps with REST APIs, backend services, and third-party libraries while optimizing application performance, responsiveness, and loading speed.',
       achievements: ['Developed and maintained mobile applications for Android and iOS using React Native', 'Built intuitive, responsive UI/UX based on Figma designs', 'Integrated apps with REST APIs, backend services, and third-party libraries', 'Optimized application performance, responsiveness, and loading speed', 'Implemented secure authentication, authorization, and data storage mechanisms', 'Deployed applications to Google Play Store and Apple App Store']
     },
     {
       title: 'Web Developer',
       company: 'Life Analytics',
-      period: 'Dec 2025 - Jan 2026',
-      description: 'Developed high-performance RESTful APIs using FastAPI and built responsive, modern user interfaces with React and Tailwind CSS. Integrated frontend applications with backend APIs, designed and managed data models using MongoDB, and containerized applications using Docker for consistent development and deployment.',
+      period: '2025 - 2026',
+      description: 'Developed high-performance Python RESTful APIs using FastAPI and built responsive, modern user interfaces with React and Tailwind CSS. Integrated frontend applications with backend APIs, designed and managed data models using MongoDB, and containerized applications using Docker for consistent development and deployment.',
       achievements: ['Developed high-performance RESTful APIs using FastAPI', 'Built responsive and modern user interfaces with React and Tailwind CSS', 'Integrated frontend applications with backend APIs', 'Designed and managed data models using MongoDB', 'Containerized applications using Docker for consistent development and deployment', 'Implemented authentication, validation, and error handling']
     },
     {
       title: 'Full-stack Developer',
       company: 'NUVO MEDIA LAB',
-      period: 'Nov 2025 - Jan 2026',
+      period: '2025 - 2026',
       description: 'Developed, maintained, and optimized web applications using Laravel and modern PHP practices. Designed and implemented RESTful APIs, backend logic, and database structures. Built responsive, user-friendly frontends using React and Tailwind CSS while integrating third-party services such as payment gateways, SMS/Email APIs, and authentication providers.',
       achievements: ['Developed and optimized web applications using Laravel and modern PHP practices', 'Designed and implemented RESTful APIs, backend logic, and database structures', 'Built responsive, user-friendly frontends using React and Tailwind CSS', 'Integrated third-party services including payment gateways and SMS/Email APIs', 'Managed databases (MySQL/PostgreSQL) with optimized queries and data integrity', 'Set up and maintained CI/CD pipelines for automated testing and deployment']
     },
     {
       title: 'Full-Stack Developer',
       company: 'Machine and Equipment Corporation of Africa',
-      period: '2021 - Present',
+      period: '2021 - 2025',
       description: 'Architected and developed a comprehensive e-commerce platform for industrial machinery and equipment sales. Built scalable full-stack solutions with modern technologies, integrating payment gateways, inventory management, and customer relationship management systems for B2B transactions.',
       achievements: ['Built scalable e-commerce platform handling over 1000 products', 'Integrated secure payment processing and multi-currency support', 'Developed automated inventory management reducing manual work by 60%', 'Implemented responsive design serving over 600 monthly active users']
     },
@@ -155,7 +171,7 @@ const About = () => {
               >
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium">
                   <Heart className="w-4 h-4 mr-2" />
-                  Passionate Developer
+                  Passionate Software Engineer
                 </div>
               </motion.div>
 
@@ -177,7 +193,7 @@ const About = () => {
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
                 <div className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
-                  A passionate full-stack developer with over 4 years of experience creating beautiful, functional, and user-friendly web applications that solve real-world problems.
+                  A passionate software engineer with over 4 years of experience creating beautiful, functional, and user-friendly web applications that solve real-world problems.
                 </div>
               </motion.p>
 
@@ -226,7 +242,7 @@ const About = () => {
                 My Journey
               </h2>
               <p className="text-xl text-secondary-600 max-w-2xl mx-auto">
-                From curiosity to expertise - the story of how I became a full-stack developer.
+                From curiosity to expertise - the story of how I became a software engineer.
               </p>
             </div>
           </motion.div>
@@ -283,7 +299,7 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-secondary-600 leading-relaxed">
                 <p>
-                  I'm a dedicated full-stack developer who loves turning ideas into reality through code. 
+                  I'm a dedicated software engineer who loves turning ideas into reality through code. 
                   With a strong foundation in both frontend and backend development, I create comprehensive 
                   solutions that solve real-world problems.
                 </p>
@@ -327,7 +343,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <Code className="w-5 h-5 text-primary-600" />
-                    <span className="text-secondary-600">Full-Stack Developer</span>
+                    <span className="text-secondary-600">Software Engineer</span>
                   </div>
                 </div>
               </div>
