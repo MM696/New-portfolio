@@ -68,7 +68,7 @@ const Home = () => {
     { name: "Express.js", level: 85, color: "from-green-600 to-green-800", icon: Terminal, customIcon: "/images/ExpressJS.png" },
     { name: "PostgreSQL", level: 82, color: "from-blue-700 to-indigo-700", icon: Database, customIcon: "/images/PostgreSQL.svg" },
     { name: "MongoDB", level: 85, color: "from-green-600 to-green-800", icon: Database, customIcon: "/images/MongoDB.jpg" },
-    { name: "HTML5", level: 95, color: "from-orange-500 to-red-500", icon: Square, customIcon: "/images/HTML5.webp" },
+    { name: "Angular", level: 95, color: "from-orange-500 to-red-500", icon: Square, customIcon: "/images/angular.png" },
     { name: "CSS3", level: 95, color: "from-blue-500 to-blue-700", icon: Circle, customIcon: "/images/CSS3.png" },
     { name: "Redux", level: 80, color: "from-purple-500 to-pink-500", icon: Hexagon, customIcon: "/images/Redux.png" },
     { name: "Git", level: 85, color: "from-orange-600 to-red-600", icon: GitBranch, customIcon: "/images/Git.png" },
@@ -78,7 +78,7 @@ const Home = () => {
     { name: "Python", level: 80, color: "from-yellow-500 to-orange-500", icon: Code, customIcon: "/images/python.png" },
     { name: "Flutter", level: 85, color: "from-blue-500 to-blue-700", icon: Code, customIcon: "/images/flutter.png" },
     { name: "NestJS", level: 75, color: "from-[#E92747] to-[#b51d37]", icon: Code, customIcon: "/images/nestjs.png" },
-    
+
   ];
 
   const recentWork = [

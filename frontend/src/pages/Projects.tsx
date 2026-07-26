@@ -48,7 +48,7 @@ const sampleProjects = [
   },  
 ];
 
-const techFilters = ["All", "React", "Tailwind CSS", "NextJS", "NodeJS", "Laravel", "Express", "MongoDB", "PostgreSQL", "Supabase", "EmailJS"];
+const techFilters = ["All", "React", "Tailwind CSS", "NextJS", "NodeJS", "Angular", "Express", "MongoDB", "PostgreSQL", "Supabase", "EmailJS"];
 
 // ✅ Image Slider Component
 function ImageSlider({ images, title }: { images: string[]; title: string }) {
