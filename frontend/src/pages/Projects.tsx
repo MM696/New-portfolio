@@ -3,20 +3,20 @@ import { Github, ExternalLink, Filter, Star, ChevronLeft, ChevronRight } from "l
 import { useState, useEffect } from "react";
 
 const sampleProjects = [
-    {
-      id: 1,
-      title: "An Cardiovascular Disease Detection System",
-      link: "https://inspectcare-p1i7.onrender.com/",
-      code: "https://github.com/MM696/inspectcare",
-      images: ["/images/img_8.png", "/images/img_8a.png"],
-      tech: ["React", "Tailwind CSS", "NodeJS", "Express", "PostgreSQL"],
-      description:
-          "A comprehensive cardiovascular disease detection system for detecting cardiovascular diseases using modern web technologies. Features symptom detection, diagnosis and doctor's appointment booking with other features.",
-        category: "Full Stack",
-      featured: false,
-      year: "2023",
-      status: "Live"
-    },
+  {
+    id: 2, // use the next free id in your array
+    title: "Heartcord — AI Workspace Landing Page",
+    link: "https://heartcord-landing-page.onrender.com/", // add after you deploy (see below)
+    code: "https://github.com/MM696/HEARTCORD-landing-page",
+    images: ["/images/heartcord.png", "/images/heartcord_1.png"], // your screenshots
+    tech: ["Angular", "TypeScript", "SCSS"],
+    description:
+      "A modern marketing landing page for Heartcord, an AI developer workspace. Features a cinematic full-bleed hero, animated global network visuals, product showcase sections, pricing, FAQ, and scroll-triggered motion — all built as reusable Angular components.",
+    category: "Frontend",
+    featured: false,
+    year: "2026",
+    status: "Live" // or "In Progress" until you deploy
+  },
     
     {
       id: 2,

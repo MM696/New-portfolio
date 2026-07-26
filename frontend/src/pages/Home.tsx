@@ -78,6 +78,7 @@ const Home = () => {
     { name: "Python", level: 80, color: "from-yellow-500 to-orange-500", icon: Code, customIcon: "/images/python.png" },
     { name: "Flutter", level: 85, color: "from-blue-500 to-blue-700", icon: Code, customIcon: "/images/flutter.png" },
     { name: "NestJS", level: 75, color: "from-[#E92747] to-[#b51d37]", icon: Code, customIcon: "/images/nestjs.png" },
+    
   ];
 
   const recentWork = [
